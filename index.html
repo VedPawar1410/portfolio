@@ -12,37 +12,184 @@
 <body>
     <header>
         <div class="logo">
-            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="25" cy="25" r="20" fill="#4A90E2" stroke="#2C5F8F" stroke-width="2"/>
-                <path d="M25 15 L25 35 M15 25 L35 25" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            <svg width="50" height="50" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <path d="M8 28.5 32 10l24 18.5v22a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4v-22Z" fill="#FFD166" stroke="#111111" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M24 45a8 8 0 0 1 16 0v10H24V45Z" fill="#FF6B6B" stroke="#111111" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M14 28.5v-4l18-14 18 14v4" fill="none" stroke="#111111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </div>
         <nav>
             <ul>
-                <li><a class="btn btn-link" href="#about">About</a></li>
+                <li><a class="btn btn-link" href="#hero">Home</a></li>
                 <li><a class="btn btn-link" href="#projects">Projects</a></li>
-                <li><a class="btn btn-link" href="#contact">Contact</a></li>
+                <li><a class="btn btn-link" href="#case-studies">Case Studies</a></li>
+                <li><a class="btn btn-link" href="#insights">Insights</a></li>
+                <li><a class="btn btn-link" href="#about">About</a></li>
+                <li><a class="btn btn-link" href="assets/VedPawar_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a software engineer with a passion for building web applications.</p>
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Hey there, I'm Ved Pawar</p>
+                <h1>CS Grad Student &amp; Full-Stack Problem Solver</h1>
+                <p class="hero-subtitle">I design thoughtful software experiences with a focus on robust engineering, research-backed decisions, and whimsical polish.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#projects">View My Work</a>
+                    <a class="btn btn-secondary" href="assets/VedPawar_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+                </div>
+                <ul class="social-links">
+                    <li><a class="social-link" href="https://github.com/vedpawar" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a class="social-link" href="https://www.linkedin.com/in/vedpawar" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a class="social-link" href="mailto:ved@pawar.dev">Email</a></li>
+                </ul>
+            </div>
+            <div class="hero-illustration" aria-hidden="true">
+                <div class="hero-bubble bubble-one"></div>
+                <div class="hero-bubble bubble-two"></div>
+                <div class="hero-bubble bubble-three"></div>
+            </div>
         </section>
-        <section id="projects">
-            <h2>My Projects</h2>
-            <ul>
-                <li>Project 1</li>
-                <li>Project 2</li>
-                <li>Project 3</li>
-            </ul>
+
+        <section id="projects" class="band">
+            <header class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Hand-picked builds that highlight research, product thinking, and engineering craft.</p>
+            </header>
+            <div class="card-grid project-grid">
+                <article class="card project-card">
+                    <span class="tag">ML Research</span>
+                    <h3>Adaptive Vision Model Lab</h3>
+                    <p>Self-training pipeline that boosts classification accuracy on low-resource, imbalanced datasets for medical imaging.</p>
+                    <ul class="meta">
+                        <li>PyTorch</li>
+                        <li>Lightning</li>
+                        <li>Docker</li>
+                    </ul>
+                    <a class="btn btn-ghost" href="case-studies/adaptive-vision.html">Read Case Study</a>
+                </article>
+                <article class="card project-card">
+                    <span class="tag">Full-Stack</span>
+                    <h3>Campus Research Hub</h3>
+                    <p>An internal portal that streamlines experiment tracking, reporting, and mentorship matching for grad cohorts.</p>
+                    <ul class="meta">
+                        <li>Next.js</li>
+                        <li>PostgreSQL</li>
+                        <li>GraphQL</li>
+                    </ul>
+                    <a class="btn btn-ghost" href="case-studies/campus-hub.html">Read Case Study</a>
+                </article>
+                <article class="card project-card">
+                    <span class="tag">Systems</span>
+                    <h3>Realtime Task Orchestrator</h3>
+                    <p>Fault-tolerant messaging and scheduling layer that coordinates thousands of IoT devices with graceful degradation.</p>
+                    <ul class="meta">
+                        <li>Go</li>
+                        <li>Redis Streams</li>
+                        <li>gRPC</li>
+                    </ul>
+                    <a class="btn btn-ghost" href="case-studies/task-orchestrator.html">Read Case Study</a>
+                </article>
+            </div>
         </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Get in touch with me!</p>
-            <button class="btn btn-primary">Say Hello</button>
+
+        <section id="case-studies" class="band band-alt">
+            <header class="section-header">
+                <h2>Project Deep Dives</h2>
+                <p>Step-by-step explorations of the toughest problems, the frameworks I picked, and what I learned along the way.</p>
+            </header>
+            <div class="card-grid case-study-grid">
+                <article class="card case-card">
+                    <h3>Detecting Bias in Clinical Datasets</h3>
+                    <p>How a fairness audit uncovered blind spots in a diagnostic model and the interventions that improved recall by 15%.</p>
+                    <a class="btn btn-ghost" href="case-studies/clinical-bias.html">Read the Story</a>
+                </article>
+                <article class="card case-card">
+                    <h3>Designing Resilient Edge Networks</h3>
+                    <p>A narrative on building resilient messaging with gRPC retries, idempotent jobs, and chaos testing in production.</p>
+                    <a class="btn btn-ghost" href="case-studies/edge-networks.html">Read the Story</a>
+                </article>
+                <article class="card case-card">
+                    <h3>Teaching Assistants, Reimagined</h3>
+                    <p>Research-driven UX experiments that led to a playful, supportive AI teaching assistant for an algorithms course.</p>
+                    <a class="btn btn-ghost" href="case-studies/ai-ta.html">Read the Story</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="insights" class="band">
+            <header class="section-header">
+                <h2>Explainers &amp; Insights</h2>
+                <p>Writing that breaks down complex concepts, tooling decisions, and the “why” behind each build.</p>
+            </header>
+            <div class="card-grid insight-grid">
+                <article class="card insight-card">
+                    <h3>Choosing the Right Vector DB for RAG</h3>
+                    <p>Benchmarking Pinecone, Weaviate, and Qdrant for research-heavy retrieval workflows.</p>
+                    <a class="btn btn-ghost" href="insights/vector-db-guide.html">Read Insight</a>
+                </article>
+                <article class="card insight-card">
+                    <h3>Storyboarding Systems Design Interviews</h3>
+                    <p>A playful framework to turn vague prompts into focused design narratives under pressure.</p>
+                    <a class="btn btn-ghost" href="insights/system-design-storyboards.html">Read Insight</a>
+                </article>
+                <article class="card insight-card">
+                    <h3>From Prototype to Production in 14 Days</h3>
+                    <p>What it really takes—tooling, culture, and instrumentation—to ship student-led experiments fast.</p>
+                    <a class="btn btn-ghost" href="insights/prototype-to-production.html">Read Insight</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="band band-alt about-band">
+            <header class="section-header">
+                <h2>About Me</h2>
+            </header>
+            <div class="about-grid">
+                <div class="about-card card">
+                    <h3>Academic Roots</h3>
+                    <p>CS grad student exploring machine learning systems, human-centered design, and resilient infrastructure.</p>
+                    <ul class="meta">
+                        <li>M.S. Computer Science — XYZ University</li>
+                        <li>Focus: ML Systems &amp; Product Strategy</li>
+                    </ul>
+                </div>
+                <div class="about-card card">
+                    <h3>What I’m Exploring</h3>
+                    <p>Thinking about usable AI, developer tooling, and the blend of art + engineering in playful product experiences.</p>
+                    <ul class="meta">
+                        <li>Teaching: Graduate TA for Algorithms &amp; UX for ML</li>
+                        <li>Community: Organizer at DevSketch</li>
+                    </ul>
+                </div>
+                <div class="about-card card">
+                    <h3>Let’s Collaborate</h3>
+                    <p>Open to research internships, product-minded SWE roles, and opportunities to build with curious, kind teams.</p>
+                    <a class="btn btn-primary" href="mailto:ved@pawar.dev">Say Hello</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="band contact-band">
+            <div class="contact-card card">
+                <h2>Ready to chat?</h2>
+                <p>Whether it’s research collaboration, product tinkering, or storytelling through code, I’d love to hear from you.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="mailto:ved@pawar.dev">Start a Conversation</a>
+                    <a class="btn btn-secondary" href="assets/VedPawar_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+                </div>
+            </div>
         </section>
     </main>
+    <footer>
+        <p>© <span id="year"></span> Ved Pawar · Built with care and bold outlines.</p>
+    </footer>
+    <script>
+        const yearDisplay = document.getElementById('year');
+        if (yearDisplay) {
+            yearDisplay.textContent = new Date().getFullYear();
+        }
+    </script>
 </body>
 </html>
