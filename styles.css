@@ -17,6 +17,8 @@
     --border-thick: 3px;
     --radius: 16px;
     --ease: cubic-bezier(.2, .9, .2, 1);
+    --header-height: 96px;
+    --header-offset: 1.0rem;
 }
 
 html, body {
@@ -30,19 +32,23 @@ body {
     font-weight: 500;
 }
 
-header {
+.top-header {
+    position: fixed;
+    top: var(--header-offset);
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(99%, 95vw);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    min-height: var(--header-height);
+    padding: 1rem clamp(1rem, 6vw, 3rem);
     background-color: var(--paper-strong);
     border: var(--border-thick) solid var(--ink);
     border-radius: var(--radius);
     box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--ink);
-    position: sticky;
-    top: 0.75rem;
-    margin: 0.75rem 0.75rem 1.5rem;
     z-index: 100;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -138,6 +144,7 @@ nav a:hover::after {
 
 main {
     padding: 0;
+    padding-top: calc(var(--header-height) + var(--header-offset) + 2.75rem);
 }
 
 .band,
@@ -392,10 +399,12 @@ footer {
 }
 
 @media (max-width: 960px) {
-    header {
+    .top-header {
         flex-direction: column;
         gap: 1rem;
         align-items: flex-start;
+        padding-inline: clamp(1rem, 6vw, 2rem);
+        width: calc(100% - 2rem);
     }
 
     nav ul {
@@ -420,9 +429,9 @@ footer {
 }
 
 @media (max-width: 640px) {
-    header {
-        padding: 0.9rem 1.2rem;
-        margin: 0.5rem 0.5rem 0;
+    .top-header {
+        padding: 0.75rem 1rem;
+        width: calc(100% - 1rem);
     }
 
     .band,
