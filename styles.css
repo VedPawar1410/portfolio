@@ -279,6 +279,22 @@ main {
     place-items: center;
 }
 
+.hero-photo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border: var(--border-thick) solid var(--ink);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--ink);
+    object-fit: cover;
+    transition: transform 180ms var(--ease), box-shadow 180ms var(--ease);
+}
+
+.hero-photo:hover {
+    transform: translate(-2px, -2px) rotate(-1deg);
+    box-shadow: calc(var(--shadow-offset) + 2px) calc(var(--shadow-offset) + 2px) 0 var(--ink);
+}
+
 .hero-bubble {
     position: absolute;
     border: var(--border-thick) solid var(--ink);
