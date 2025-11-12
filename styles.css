@@ -163,7 +163,7 @@ main {
 
 .band:hover,
 .contact-band:hover {
-    transform: translate(-2px, -2px) rotate(-.3deg);
+    
     box-shadow: calc(var(--shadow-offset) + 2px) calc(var(--shadow-offset) + 2px) 0 var(--ink);
 }
 
@@ -350,7 +350,7 @@ main {
 }
 
 .card:hover {
-    transform: translate(-3px, -3px) rotate(-1deg);
+    transform: scale(1.02);
     box-shadow: 8px 8px 0 var(--ink);
 }
 
