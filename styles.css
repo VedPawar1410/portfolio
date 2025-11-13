@@ -538,3 +538,31 @@ html {
     transform: translateX(-50%) translateY(0);
     pointer-events: auto;
 }
+
+/* Custom Scrollbar */
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--paper);
+    border-left: 2px solid var(--paper-strong);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--yellow);
+    border: 2px solid var(--ink);
+    border-radius: 10px;
+    transition: background 200ms var(--ease);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffde68;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--yellow) var(--paper);
+}
