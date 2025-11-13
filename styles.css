@@ -56,15 +56,32 @@ body {
     align-items: center;
 }
 
-.logo svg {
+.logo-button {
+    display: inline-block;
+    padding: 0.6rem 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    text-decoration: none;
+    background: var(--green);
+    border: var(--border-thick) solid var(--ink);
+    border-radius: var(--radius);
+    box-shadow: 4px 4px 0 var(--ink);
+    transition: transform 120ms var(--ease), box-shadow 120ms var(--ease), background 200ms var(--ease);
     cursor: pointer;
-    transition: transform 0.3s var(--ease), filter 0.3s var(--ease);
-    animation: floaty 3.5s ease-in-out infinite;
+    white-space: nowrap;
 }
 
-.logo svg:hover {
-    transform: rotate(-3deg) scale(1.05);
-    filter: drop-shadow(0 0 0 var(--ink));
+.logo-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--ink);
+    background: #5de4b8;
+}
+
+.logo-button:active {
+    transform: translate(1px, 1px);
+    box-shadow: 2px 2px 0 var(--ink);
 }
 
 nav ul {
