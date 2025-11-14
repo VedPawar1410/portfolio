@@ -230,28 +230,53 @@
             <header class="section-header">
                 <h2>About Me</h2>
             </header>
-            <div class="about-grid">
-                <div class="about-card card">
-                    <h3>Academic Roots</h3>
-                    <p>B.Tech Computer Science &amp; Engineering at Vellore Institute of Technology (CGPA 8.69/10). Formerly at Bangalore International Academy and New Baldwin International School.</p>
-                    <ul class="meta">
-                        <li>Specializations: ML, Data Analytics, Cloud</li>
-                        <li>Location: Vellore &amp; Bangalore, India</li>
-                    </ul>
+            <div class="about-carousel-wrapper">
+                <button class="about-arrow about-arrow-prev" aria-label="Previous card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="about-carousel">
+                    <div class="about-carousel-track">
+                        <div class="about-card card" data-index="0">
+                            <h3>Academic Roots</h3>
+                            <p>B.Tech Computer Science &amp; Engineering at Vellore Institute of Technology (CGPA 8.69/10). Formerly at Bangalore International Academy and New Baldwin International School.</p>
+                            <ul class="meta">
+                                <li>Specializations: ML, Data Analytics, Cloud</li>
+                                <li>Location: Vellore &amp; Bangalore, India</li>
+                            </ul>
+                            <div class="about-card-links">
+                                <a href="#" class="about-link-btn">Source 1</a>
+                                <a href="#" class="about-link-btn">Source 2</a>
+                            </div>
+                        </div>
+                        <div class="about-card card" data-index="1">
+                            <h3>What I'm Exploring</h3>
+                            <p>Building ML-driven reporting tools, experimenting with GenAI, and designing delightful UI systems that communicate data clearly.</p>
+                            <ul class="meta">
+                                <li>Developer Tools: GitHub, Docker, Agile</li>
+                                <li>Domains: Full Stack, Cloud, Analytics</li>
+                            </ul>
+                            <div class="about-card-links">
+                                <a href="#" class="about-link-btn">Source 1</a>
+                                <a href="#" class="about-link-btn">Source 2</a>
+                            </div>
+                        </div>
+                        <div class="about-card card" data-index="2">
+                            <h3>Let's Collaborate</h3>
+                            <p>Open to software engineering internships, ML research roles, and collaborative projects that bring bold ideas to production.</p>
+                            <div class="about-card-links">
+                                <a href="mailto:ved@pawar.dev" class="about-link-btn">Email</a>
+                                <a href="#" class="about-link-btn">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-card card">
-                    <h3>What I’m Exploring</h3>
-                    <p>Building ML-driven reporting tools, experimenting with GenAI, and designing delightful UI systems that communicate data clearly.</p>
-                    <ul class="meta">
-                        <li>Developer Tools: GitHub, Docker, Agile</li>
-                        <li>Domains: Full Stack, Cloud, Analytics</li>
-                    </ul>
-                </div>
-                <div class="about-card card">
-                    <h3>Let’s Collaborate</h3>
-                    <p>Open to software engineering internships, ML research roles, and collaborative projects that bring bold ideas to production.</p>
-                    <a class="btn btn-primary" href="mailto:ved@pawar.dev">Say Hello</a>
-                </div>
+                <button class="about-arrow about-arrow-next" aria-label="Next card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </div>
         </section>
 
@@ -372,6 +397,71 @@
         }
         if (nextArrow) {
             nextArrow.addEventListener('click', showNextSlide);
+        }
+
+        // About carousel functionality
+        const aboutCards = document.querySelectorAll('.about-card');
+        const aboutTrack = document.querySelector('.about-carousel-track');
+        const aboutPrevBtn = document.querySelector('.about-arrow-prev');
+        const aboutNextBtn = document.querySelector('.about-arrow-next');
+        let currentAboutIndex = 1; // Start with middle card
+        const totalAboutCards = aboutCards.length;
+
+        function updateAboutCarousel() {
+            // Update active class
+            aboutCards.forEach((card, index) => {
+                card.classList.remove('active');
+                if (index === currentAboutIndex) {
+                    card.classList.add('active');
+                }
+            });
+
+            // Calculate transform offset to center the active card
+            if (aboutCards.length > 0 && aboutTrack) {
+                const cardWidth = aboutCards[0].offsetWidth;
+                const gap = 32; // 2rem = 32px
+                const containerWidth = aboutTrack.parentElement.offsetWidth;
+                
+                // Calculate position to center the active card
+                const totalCardWidth = cardWidth + gap;
+                const startPosition = (containerWidth / 2) - (cardWidth / 2);
+                const offset = startPosition - (currentAboutIndex * totalCardWidth);
+                
+                aboutTrack.style.transform = `translateX(${offset}px)`;
+            }
+        }
+
+        function showNextAboutCard() {
+            currentAboutIndex = (currentAboutIndex + 1) % totalAboutCards;
+            updateAboutCarousel();
+        }
+
+        function showPrevAboutCard() {
+            currentAboutIndex = (currentAboutIndex - 1 + totalAboutCards) % totalAboutCards;
+            updateAboutCarousel();
+        }
+
+        // Initialize carousel
+        if (aboutCards.length > 0) {
+            // Wait for DOM to be fully rendered
+            setTimeout(() => {
+                updateAboutCarousel();
+            }, 100);
+            
+            // Add event listeners
+            if (aboutNextBtn) {
+                aboutNextBtn.addEventListener('click', showNextAboutCard);
+            }
+            if (aboutPrevBtn) {
+                aboutPrevBtn.addEventListener('click', showPrevAboutCard);
+            }
+
+            // Handle window resize
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(updateAboutCarousel, 250);
+            });
         }
     </script>
 </body>
