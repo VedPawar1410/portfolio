@@ -685,22 +685,23 @@ main {
 
 .about-carousel-track {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     transition: transform 500ms var(--ease);
     align-items: center;
 }
 
 .about-card {
-    flex: 0 0 calc(33.333% - 1.33rem);
-    min-width: 280px;
-    transform: scale(0.85);
-    opacity: 0.7;
+    flex: 0 0 calc(35% - 1.33rem);
+    min-width: 320px;
+    transform: scale(1);
+    opacity: 0.6;
     transition: transform 500ms var(--ease), opacity 500ms var(--ease);
     text-align: left;
+    padding: 2rem;
 }
 
 .about-card.active {
-    transform: scale(1);
+    transform: scale(1.15);
     opacity: 1;
     z-index: 2;
 }
@@ -813,7 +814,11 @@ main {
     
     .about-card {
         flex: 0 0 calc(50% - 1rem);
-        min-width: 250px;
+        min-width: 280px;
+    }
+    
+    .about-card.active {
+        transform: scale(1.1);
     }
     
     .about-arrow {
@@ -835,6 +840,11 @@ main {
     .about-card {
         flex: 0 0 100%;
         min-width: 100%;
+        padding: 1.75rem;
+    }
+    
+    .about-card.active {
+        transform: scale(1.05);
     }
     
     .about-arrow {
