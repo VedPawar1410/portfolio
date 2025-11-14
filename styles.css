@@ -196,6 +196,7 @@ main {
     color: var(--blue-dark);
     font-weight: 800;
     letter-spacing: .2px;
+    font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .section-header p {
