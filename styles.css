@@ -727,15 +727,26 @@ main {
     }
 }
 
+/* Project Section Background */
+#projects {
+    background: linear-gradient(135deg, #ffffff 0%, var(--paper-strong) 50%, #ffe8b1 100%);
+}
+
 /* Project Carousel */
 .project-carousel {
     position: relative;
-    background: #ffffff;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 243, 222, 0.9) 100%);
     border: var(--border-thick) solid var(--ink);
     border-radius: var(--radius);
     padding: 2rem;
     box-shadow: 6px 6px 0 var(--ink);
     min-height: 500px;
+    transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+}
+
+.project-carousel:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 8px 8px 0 var(--ink);
 }
 
 .project-carousel:hover .carousel-arrow {
@@ -803,14 +814,18 @@ main {
 }
 
 .project-title-box {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     margin-bottom: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .project-title-box h3 {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background: var(--pink);
+    background: linear-gradient(135deg, var(--pink) 0%, #ff8585 100%);
     border: var(--border-thick) solid var(--ink);
     border-radius: var(--radius);
     box-shadow: 4px 4px 0 var(--ink);
@@ -818,6 +833,54 @@ main {
     font-weight: 700;
     color: var(--ink);
     margin: 0;
+    transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+}
+
+.project-title-box h3:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 6px 6px 0 var(--ink);
+}
+
+.project-links {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.project-link-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: var(--border-thick) solid var(--ink);
+    background: linear-gradient(135deg, var(--yellow) 0%, #ffd94d 100%);
+    color: var(--ink);
+    text-decoration: none;
+    transition: transform 200ms var(--ease), background 200ms var(--ease), box-shadow 200ms var(--ease);
+    flex-shrink: 0;
+    box-shadow: 3px 3px 0 var(--ink);
+    padding: 0;
+    line-height: 1;
+}
+
+.project-link-icon svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    flex-shrink: 0;
+}
+
+.project-link-icon:hover {
+    transform: scale(1.15) rotate(-5deg);
+    background: linear-gradient(135deg, #ffd94d 0%, var(--yellow) 100%);
+    box-shadow: 5px 5px 0 var(--ink);
+}
+
+.project-link-icon:active {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 0 var(--ink);
 }
 
 .project-tags {
@@ -826,6 +889,17 @@ main {
     justify-content: center;
     gap: 0.5rem;
     margin-bottom: 2rem;
+}
+
+.project-tags .tag {
+    transition: transform 150ms var(--ease), box-shadow 150ms var(--ease), background 150ms var(--ease);
+    box-shadow: 2px 2px 0 var(--ink);
+}
+
+.project-tags .tag:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 var(--ink);
+    background: #ffd94d;
 }
 
 .project-content {
@@ -859,6 +933,12 @@ main {
     line-height: 1.5;
     position: relative;
     padding-left: 2rem;
+    transition: transform 150ms var(--ease), background 150ms var(--ease);
+}
+
+.project-bullets li:hover {
+    transform: translateX(3px);
+    background: #fff9e6;
 }
 
 .project-bullets li::before {
@@ -876,10 +956,25 @@ main {
     gap: 1rem;
 }
 
+.project-image-container {
+    position: relative;
+    flex: 1;
+    transition: transform 200ms var(--ease);
+}
+
+.project-image-container:hover {
+    transform: scale(1.02);
+}
+
+.project-image-container:hover .expand-image-btn {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
 .project-image-placeholder {
     flex: 1;
     min-height: 200px;
-    background: var(--paper-strong);
+    background: linear-gradient(135deg, var(--paper-strong) 0%, #ffe8b1 100%);
     border: var(--border-thick) solid var(--pink);
     border-radius: var(--radius);
     display: flex;
@@ -888,6 +983,58 @@ main {
     font-weight: 700;
     color: var(--ink);
     font-size: 1rem;
+    box-shadow: 3px 3px 0 rgba(17, 17, 17, 0.1);
+    transition: box-shadow 200ms var(--ease);
+}
+
+.project-image-container:hover .project-image-placeholder {
+    box-shadow: 5px 5px 0 rgba(17, 17, 17, 0.15);
+}
+
+.expand-image-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: var(--border-thick) solid var(--ink);
+    background: linear-gradient(135deg, var(--green) 0%, #5de4b8 100%);
+    color: var(--ink);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 0 var(--ink);
+    opacity: 0;
+    transform: translate(5px, 5px);
+    transition: all 200ms var(--ease);
+    padding: 0;
+    z-index: 5;
+}
+
+.expand-image-btn:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 0 var(--ink);
+    background: linear-gradient(135deg, #5de4b8 0%, var(--green) 100%);
+}
+
+.expand-image-btn:active {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 0 var(--ink);
+}
+
+.expand-image-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Show expand button on touch devices */
+@media (hover: none) {
+    .expand-image-btn {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
 }
 
 .project-nav-dots {
@@ -1332,4 +1479,144 @@ html {
 * {
     scrollbar-width: thin;
     scrollbar-color: var(--yellow) var(--paper);
+}
+
+/* Image Fullscreen Modal */
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 17, 17, 0.92);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms var(--ease);
+    padding: 2rem;
+    backdrop-filter: blur(8px);
+}
+
+.image-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: modalZoomIn 300ms var(--ease);
+}
+
+.modal-image-placeholder {
+    width: 100%;
+    max-width: 1200px;
+    height: 80vh;
+    background: linear-gradient(135deg, var(--paper-strong) 0%, #ffe8b1 100%);
+    border: calc(var(--border-thick) * 1.5) solid var(--ink);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 3rem;
+    box-shadow: 12px 12px 0 var(--ink);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: var(--border-thick) solid var(--ink);
+    background: linear-gradient(135deg, var(--pink) 0%, #ff8585 100%);
+    color: var(--ink);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 0 var(--ink);
+    transition: all 200ms var(--ease);
+    padding: 0;
+    z-index: 10000;
+}
+
+.modal-close-btn:hover {
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 6px 6px 0 var(--ink);
+    background: linear-gradient(135deg, #ff8585 0%, var(--pink) 100%);
+}
+
+.modal-close-btn:active {
+    transform: scale(1.05) rotate(90deg);
+    box-shadow: 3px 3px 0 var(--ink);
+}
+
+.modal-close-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+@keyframes modalZoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 960px) {
+    .modal-image-placeholder {
+        height: 70vh;
+        font-size: 2rem;
+    }
+    
+    .modal-close-btn {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .modal-close-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .image-modal {
+        padding: 1rem;
+    }
+    
+    .modal-image-placeholder {
+        height: 60vh;
+        font-size: 1.5rem;
+        box-shadow: 8px 8px 0 var(--ink);
+    }
+    
+    .modal-close-btn {
+        width: 44px;
+        height: 44px;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+    
+    .modal-close-btn svg {
+        width: 18px;
+        height: 18px;
+    }
 }
