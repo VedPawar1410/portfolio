@@ -1161,11 +1161,14 @@ main {
 .about-card {
     flex: 0 0 calc(35% - 1.33rem);
     min-width: 320px;
+    min-height: 480px;
     transform: scale(1);
     opacity: 0.6;
     transition: transform 500ms var(--ease), opacity 500ms var(--ease);
     text-align: left;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .about-card.active {
@@ -1206,6 +1209,7 @@ main {
     margin-top: auto;
     padding-top: 1rem;
     border-top: 2px solid var(--ink);
+    flex-shrink: 0;
 }
 
 .about-link-btn {
@@ -1283,6 +1287,7 @@ main {
     .about-card {
         flex: 0 0 calc(50% - 1rem);
         min-width: 280px;
+        min-height: 480px;
     }
     
     .about-card.active {
@@ -1308,6 +1313,7 @@ main {
     .about-card {
         flex: 0 0 100%;
         min-width: 100%;
+        min-height: 480px;
         padding: 1.75rem;
     }
     
