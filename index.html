@@ -3,570 +3,399 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Ved M Pawar | Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="top-header">
-        <div class="logo">
-            <a href="#hero" class="logo-button">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <polyline points="9 22 9 12 15 12 15 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a class="btn btn-link" href="#projects">Projects</a></li>
-                <li><a class="btn btn-link" href="#case-studies">Experience</a></li>
-                <li><a class="btn btn-link" href="#insights">Certifications</a></li>
-                <li><a class="btn btn-link" href="#about">About</a></li>
-                <li><a class="btn btn-link" href="#blog">Blog</a></li>
-                <li><a class="btn btn-link" href="assets/VedPawar_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="hero" id="hero">
-            <div class="hero-content">
-                <h1>Software Engineer (SDE)-Specializing in Full Stack Development, ML, AI & Cloud</h1>
-                <p class="hero-subtitle">B.Tech CS Grad from Vellore Institute of Technology, crafting data-driven products and ML-powered systems through internships with Google Cloud and General Motors.</p>
-                <div class="hero-actions">
-                    <a class="btn btn-secondary" href="assets/VedPawar_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
-                </div>
-                <ul class="social-links">
-                    <li><a class="social-link" href="https://github.com/VedPawar1410" target="_blank" rel="noopener" aria-label="GitHub">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" fill="#181717"/>
-                        </svg>
-                    </a></li>
-                    <li><a class="social-link" href="https://www.linkedin.com/in/vedpawar14/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="#0A66C2"/>
-                        </svg>
-                    </a></li>
-                    <li><a class="social-link" id="email-link" href="mailto:vedpawar1410@gmail.com" aria-label="Email">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#EA4335"/>
-                        </svg>
-                    </a></li>
+    <header class="header">
+        <div class="header-container">
+            <a href="#hero" class="logo">Ved Pawar</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="assets/VedPawar_Resume.pdf" target="_blank" rel="noopener" class="nav-link nav-link--cta">Resume</a></li>
                 </ul>
-            </div>
-            <div class="hero-illustration">
-                <img src="assets/ved-pawar-photo.jpg" alt="Ved M Pawar - Software Engineer" class="hero-photo">
-            </div>
-        </section>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
 
-        <section id="projects" class="band">
-            <header class="section-header">
-                <h2>PROJECTS</h2>
-            </header>
-            <div class="project-carousel">
-                <button class="carousel-arrow carousel-arrow-prev" aria-label="Previous project">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <button class="carousel-arrow carousel-arrow-next" aria-label="Next project">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <div class="project-slide active" data-slide="0">
-                    <div class="project-title-box">
-                        <h3>Sentiment Analysis of Online Reviews</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/VedPawar1410" target="_blank" rel="noopener" class="project-link-icon" aria-label="GitHub Repository">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" fill="currentColor"/>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-background"></div>
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <p class="hero-eyebrow">Software Engineer</p>
+                        <h1 class="hero-title">Building Full Stack &amp; ML-Powered Systems</h1>
+                        <p class="hero-description">
+                            B.Tech CS Graduate from VIT, specializing in full-stack development, machine learning, and cloud architecture. Previously at Google Cloud and General Motors.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="assets/VedPawar_Resume.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+                                <span>Download Resume</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
                                 </svg>
                             </a>
-                            <a href="#contact" class="project-link-icon" aria-label="Research Paper">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z" fill="currentColor"/>
-                                    <path d="M8 16h8v2H8v-2zm0-4h8v2H8v-2zm0-4h5v2H8V8z" fill="currentColor"/>
+                            <a href="#projects" class="btn btn-secondary">View Projects</a>
+                        </div>
+                        <div class="hero-social">
+                            <a href="https://github.com/VedPawar1410" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
                                 </svg>
                             </a>
-                        </div>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Flask</span>
-                        <span class="tag">ML</span>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-description">
-                            <ul class="project-bullets">
-                                <li>Full-stack web app using Python, Flask, and logistic regression</li>
-                                <li>Real-time review scoring via RESTful APIs</li>
-                                <li>Playful UI with interactive features</li>
-                                <li>Machine learning model integration</li>
-                            </ul>
-                            <a class="btn btn-ghost" href="#contact">Discuss Project</a>
-                        </div>
-                        <div class="project-images">
-                            <div class="project-image-container">
-                                <div class="project-image-placeholder">Img 1</div>
-                                <button class="expand-image-btn" aria-label="Expand image">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="project-image-container">
-                                <div class="project-image-placeholder">Img 2</div>
-                                <button class="expand-image-btn" aria-label="Expand image">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-nav-dots">
-                        <button class="nav-dot active" data-slide="0" aria-label="Go to project 1"></button>
-                        <button class="nav-dot" data-slide="1" aria-label="Go to project 2"></button>
-                        <button class="nav-dot" data-slide="2" aria-label="Go to project 3"></button>
-                    </div>
-                </div>
-                <div class="project-slide" data-slide="1">
-                    <div class="project-title-box">
-                        <h3>AI Surveillance with Deep Learning</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/VedPawar1410" target="_blank" rel="noopener" class="project-link-icon" aria-label="GitHub Repository">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" fill="currentColor"/>
+                            <a href="https://www.linkedin.com/in/vedpawar14/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                                 </svg>
                             </a>
-                            <a href="#contact" class="project-link-icon" aria-label="Research Paper">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z" fill="currentColor"/>
-                                    <path d="M8 16h8v2H8v-2zm0-4h8v2H8v-2zm0-4h5v2H8V8z" fill="currentColor"/>
+                            <button class="social-link" id="email-link" aria-label="Copy Email">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="5" width="18" height="14" rx="2"/>
+                                    <path d="M3 7l9 6 9-6"/>
                                 </svg>
-                            </a>
+                            </button>
                         </div>
                     </div>
-                    <div class="project-tags">
-                        <span class="tag">Computer Vision</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">TensorFlow</span>
-                        <span class="tag">Deep Learning</span>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-description">
-                            <ul class="project-bullets">
-                                <li>Deployed YOLOv8, Faster R-CNN, and custom I3D two-stream model</li>
-                                <li>Autonomous anomaly detection on UCF-Crime scenarios</li>
-                                <li>Real-time video processing capabilities</li>
-                                <li>High accuracy performance metrics</li>
-                            </ul>
-                            <a class="btn btn-ghost" href="#contact">View Demo</a>
+                    <div class="hero-image">
+                        <div class="hero-image-wrapper">
+                            <img src="assets/ved-pawar-photo.jpg" alt="Ved M Pawar" class="hero-photo">
                         </div>
-                        <div class="project-images">
-                            <div class="project-image-container">
-                                <div class="project-image-placeholder">Img 1</div>
-                                <button class="expand-image-btn" aria-label="Expand image">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="project-image-container">
-                                <div class="project-image-placeholder">Img 2</div>
-                                <button class="expand-image-btn" aria-label="Expand image">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-nav-dots">
-                        <button class="nav-dot" data-slide="0" aria-label="Go to project 1"></button>
-                        <button class="nav-dot active" data-slide="1" aria-label="Go to project 2"></button>
-                        <button class="nav-dot" data-slide="2" aria-label="Go to project 3"></button>
-                    </div>
-                </div>
-                <div class="project-slide" data-slide="2">
-                    <div class="project-title-box">
-                        <h3>Anomaly Detection on Wearable Sensors</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/VedPawar1410" target="_blank" rel="noopener" class="project-link-icon" aria-label="GitHub Repository">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" fill="currentColor"/>
-                                </svg>
-                            </a>
-                            <a href="#contact" class="project-link-icon" aria-label="Research Paper">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z" fill="currentColor"/>
-                                    <path d="M8 16h8v2H8v-2zm0-4h8v2H8v-2zm0-4h5v2H8V8z" fill="currentColor"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Data Analytics</span>
-                        <span class="tag">Pandas</span>
-                        <span class="tag">NumPy</span>
-                        <span class="tag">Random Forest</span>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-description">
-                            <ul class="project-bullets">
-                                <li>Analytics pipeline handling 10k+ PAMAP2 data rows</li>
-                                <li>Feature engineering and Random Forest models</li>
-                                <li>Health monitoring applications</li>
-                                <li>Robust anomaly detection system</li>
-                            </ul>
-                            <a class="btn btn-ghost" href="#contact">Request Details</a>
-                        </div>
-                        <div class="project-images">
-                            <div class="project-image-container">
-                                <div class="project-image-placeholder">Img 1</div>
-                                <button class="expand-image-btn" aria-label="Expand image">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="project-image-container">
-                                <div class="project-image-placeholder">Img 2</div>
-                                <button class="expand-image-btn" aria-label="Expand image">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-nav-dots">
-                        <button class="nav-dot" data-slide="0" aria-label="Go to project 1"></button>
-                        <button class="nav-dot" data-slide="1" aria-label="Go to project 2"></button>
-                        <button class="nav-dot active" data-slide="2" aria-label="Go to project 3"></button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="case-studies" class="band band-alt">
-            <header class="section-header">
-                <h2>EXPERIENCE</h2>
-            </header>
-            <div class="experience-grid">
-                <article class="experience-card">
-                    <div class="experience-header">
-                        <h3 class="experience-title">Google Cloud Internship</h3>
-                        <div class="experience-indicators">
-                            <a href="YOUR_GOOGLE_CLOUD_INTERNSHIP_LETTER_LINK_HERE" target="_blank" rel="noopener" class="indicator-link" aria-label="Internship Letter">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12h14m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Featured Work</p>
+                    <h2 class="section-title">Projects</h2>
+                </header>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                                 </svg>
-                            </a>
-                            <a href="https://cloud.google.com" target="_blank" rel="noopener" class="indicator-link" aria-label="Google Cloud">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2L4.5 5.5 2 12l2.5 6.5L12 22l7.5-3.5L22 12l-2.5-6.5L12 2z" fill="#4285F4"/>
-                                    <path d="M12 2v20l7.5-3.5L22 12l-2.5-6.5L12 2z" fill="#34A853"/>
-                                    <path d="M12 2L4.5 5.5 2 12l2.5 6.5L12 22V2z" fill="#EA4335"/>
-                                    <path d="M2 12l10-4.5L22 12l-10 4.5L2 12z" fill="#FBBC04"/>
-                                </svg>
-                            </a>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/VedPawar1410" target="_blank" rel="noopener" class="project-link" aria-label="GitHub">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" aria-label="External Link">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="experience-tags">
-                        <span class="experience-tag">GCP</span>
-                        <span class="experience-tag">Cloud Functions</span>
-                        <span class="experience-tag">Agile</span>
-                        <span class="experience-tag">Automation</span>
-                    </div>
-                    <div class="experience-description-box">
-                        <p>Designed scalable GCP solutions, automating workflows and orchestrating deployments that aligned with enterprise requirements. Collaborated with cross-functional teams to deploy cloud services and optimize infrastructure.</p>
-                    </div>
-            
-                </article>
-                <article class="experience-card">
-                    <div class="experience-header">
-                        <h3 class="experience-title">General Motors Internship</h3>
-                        <div class="experience-indicators">
-                            <a href="YOUR_GM_INTERNSHIP_LETTER_LINK_HERE" target="_blank" rel="noopener" class="indicator-link" aria-label="Internship Letter">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 12h14m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                            <a href="https://www.gm.com" target="_blank" rel="noopener" class="indicator-link" aria-label="General Motors">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/>
-                                    <path d="M8 7h8c.55 0 1 .45 1 1v8c0 .55-.45 1-1 1H8c-.55 0-1-.45-1-1V8c0-.55.45-1 1-1zm1 2v6h6V9H9z" fill="currentColor"/>
-                                    <path d="M10 11h4v2h-4v-2z" fill="currentColor"/>
-                                </svg>
-                            </a>
+                        <h3 class="project-title">Sentiment Analysis of Online Reviews</h3>
+                        <p class="project-description">Full-stack web app using Python, Flask, and logistic regression for real-time review scoring via RESTful APIs with interactive UI.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">ML</span>
+                            <span class="tag">REST API</span>
                         </div>
-                    </div>
-                    <div class="experience-tags">
-                        <span class="experience-tag">Python</span>
-                        <span class="experience-tag">Data Quality</span>
-                    </div>
-                    <div class="experience-description-box">
-                        <p>Created automated data quality reporting and analytics pipelines for Device Analytics, boosting visibility across manufacturing teams. Collaborated with plant-level data and infrastructure teams to clean and optimize analytics pipelines.</p>
-                    </div>
-                    
-                </article>
-            </div>
-        </section>
+                    </article>
 
-        <section id="insights" class="band">
-            <header class="section-header">
-                <h2>CERTIFICATIONS</h2>
-            </header>
-            <div class="certifications-grid">
-                <article class="certification-card">
-                    <div class="certification-title-bar">
-                        <h3>Google Cloud Digital Leader</h3>
-                    </div>
-                    <a href="https://www.credly.com/badges" target="_blank" rel="noopener" class="certification-preview">
-                        <div class="certification-preview-content">
-                            <span class="certification-badge">GCP</span>
-                            <p class="certification-description">Cloud infrastructure and digital transformation expertise</p>
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                                    <path d="M8 21h8M12 17v4"/>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/VedPawar1410" target="_blank" rel="noopener" class="project-link" aria-label="GitHub">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" aria-label="External Link">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                    </a>
-                </article>
-                <article class="certification-card">
-                    <div class="certification-title-bar">
-                        <h3>Neural Networks & Deep Learning</h3>
-                    </div>
-                    <a href="#contact" class="certification-preview">
-                        <div class="certification-preview-content">
-                            <span class="certification-badge">Coursera</span>
-                            <p class="certification-description">Deep learning fundamentals and neural network architectures</p>
+                        <h3 class="project-title">AI Surveillance with Deep Learning</h3>
+                        <p class="project-description">Deployed YOLOv8, Faster R-CNN, and custom I3D two-stream model for autonomous anomaly detection on UCF-Crime scenarios.</p>
+                        <div class="project-tags">
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Deep Learning</span>
                         </div>
-                    </a>
-                </article>
-                <article class="certification-card">
-                    <div class="certification-title-bar">
-                        <h3>Full-Stack Development</h3>
-                    </div>
-                    <a href="#contact" class="certification-preview">
-                        <div class="certification-preview-content">
-                            <span class="certification-badge">Ongoing</span>
-                            <p class="certification-description">Modern web development and software engineering practices</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="certification-card">
-                    <div class="certification-title-bar">
-                        <h3>Technical Skills</h3>
-                    </div>
-                    <a href="#contact" class="certification-preview">
-                        <div class="certification-preview-content">
-                            <span class="certification-badge">Expertise</span>
-                            <p class="certification-description">Python, JavaScript, TypeScript, React, ML, Cloud Architecture</p>
-                        </div>
-                    </a>
-                </article>
-            </div>
-        </section>
+                    </article>
 
-        <section id="about" class="band band-alt about-band">
-            <header class="section-header">
-                <h2>About Me</h2>
-            </header>
-            <div class="about-carousel-wrapper">
-                <button class="about-arrow about-arrow-prev" aria-label="Previous card">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <div class="about-carousel">
-                    <div class="about-carousel-track">
-                        <div class="about-card card" data-index="0">
-                            <h3>Academic Roots</h3>
-                            <p>B.Tech Computer Science &amp; Engineering at Vellore Institute of Technology (CGPA 8.69/10). Formerly at Bangalore International Academy and New Baldwin International School.</p>
-                            <ul class="meta">
-                                <li>Specializations: ML, Data Analytics, Cloud</li>
-                                <li>Location: Vellore &amp; Bangalore, India</li>
-                            </ul>
-                            <div class="about-card-links">
-                                <a href="#" class="about-link-btn">Source 1</a>
-                                <a href="#" class="about-link-btn">Source 2</a>
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <div class="project-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/VedPawar1410" target="_blank" rel="noopener" class="project-link" aria-label="GitHub">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" aria-label="External Link">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
-                        <div class="about-card card" data-index="1">
-                            <h3>What I'm Exploring</h3>
-                            <p>Building ML-driven reporting tools, experimenting with GenAI, and designing delightful UI systems that communicate data clearly.</p>
-                            <ul class="meta">
-                                <li>Developer Tools: GitHub, Docker, Agile</li>
-                                <li>Domains: Full Stack, Cloud, Analytics</li>
-                            </ul>
-                            <div class="about-card-links">
-                                <a href="#" class="about-link-btn">Source 1</a>
-                                <a href="#" class="about-link-btn">Source 2</a>
-                            </div>
+                        <h3 class="project-title">Anomaly Detection on Wearable Sensors</h3>
+                        <p class="project-description">Analytics pipeline handling 10k+ PAMAP2 data rows with feature engineering and Random Forest models for health monitoring.</p>
+                        <div class="project-tags">
+                            <span class="tag">Pandas</span>
+                            <span class="tag">NumPy</span>
+                            <span class="tag">Random Forest</span>
                         </div>
-                        <div class="about-card card" data-index="2">
-                            <h3>Let's Collaborate</h3>
-                            <p>Open to software engineering internships, ML research roles, and collaborative projects that bring bold ideas to production.</p>
-                            <div class="about-card-links">
-                                <a href="mailto:ved@pawar.dev" class="about-link-btn">Email</a>
-                                <a href="#" class="about-link-btn">LinkedIn</a>
-                            </div>
-                        </div>
-                        <div class="about-card card" data-index="3">
-                            <h3>Skills</h3>
-                            <p>Python, JavaScript (ES6+), TypeScript, SQL, React, Flask, Pandas, NumPy, TensorFlow, PyTorch, REST APIs, Docker, Git. Machine Learning, LLM/GenAI, Data Analytics, OOP, Design Patterns, Agile Methodologies, Cloud Architecture on GCP.</p>
-                            <ul class="meta">
-                                <li>Languages: Python, JavaScript, TypeScript, SQL</li>
-                                <li>Frameworks: React, Flask, TensorFlow, PyTorch</li>
-                                <li>Tools: Docker, Git, GCP, REST APIs</li>
-                            </ul>
-                            <div class="about-card-links">
-                                <a href="#contact" class="about-link-btn">View Details</a>
-                                <a href="#" class="about-link-btn">GitHub</a>
-                            </div>
-                        </div>
-                        <div class="about-card card" data-index="4">
-                            <h3>Thoughts</h3>
-                            <p>Reflections on software engineering, machine learning, and the intersection of technology and human-centered design. Exploring ideas around scalable systems, ethical AI, and building products that matter.</p>
-                            <ul class="meta">
-                                <li>Topics: ML, Full-Stack, Cloud, Design</li>
-                                <li>Focus: Practical insights and learnings</li>
-                            </ul>
-                            <div class="about-card-links">
-                                <a href="#contact" class="about-link-btn">Read More</a>
-                                <a href="#" class="about-link-btn">Archive</a>
-                            </div>
-                        </div>
-                        <div class="about-card card" data-index="5">
-                            <h3>Blogs</h3>
-                            <p>Writing about technical concepts, project deep-dives, and lessons learned from building real-world applications. Sharing knowledge on ML workflows, web development patterns, and cloud architecture.</p>
-                            <ul class="meta">
-                                <li>Format: Technical tutorials and case studies</li>
-                                <li>Updates: Regular posts on projects and insights</li>
-                            </ul>
-                            <div class="about-card-links">
-                                <a href="#contact" class="about-link-btn">View Posts</a>
-                                <a href="#" class="about-link-btn">Subscribe</a>
-                            </div>
-                        </div>
-                    </div>
+                    </article>
                 </div>
-                <button class="about-arrow about-arrow-next" aria-label="Next card">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
             </div>
         </section>
 
-        <section id="contact" class="band contact-band">
-            <header class="section-header">
-                <h2>Let's Connect</h2>
-                <p>Ready to build together? Reach out through any of these channels.</p>
-            </header>
-            <div class="contact-grid">
-                <!-- Instagram -->
-                <a href="https://instagram.com/vedpawar" target="_blank" rel="noopener" class="contact-icon-link" aria-label="Instagram">
-                    <div class="contact-icon-wrapper">
-                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="18" cy="6" r="1" fill="currentColor"/>
-                        </svg>
-                        <span class="contact-label">Instagram</span>
-                    </div>
-                </a>
+        <!-- Experience Section -->
+        <section id="experience" class="section section--alt">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Career</p>
+                    <h2 class="section-title">Experience</h2>
+                </header>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-title">Software Engineering Intern</h3>
+                                    <p class="timeline-company">Google Cloud</p>
+                                </div>
+                                <span class="timeline-date">2024</span>
+                            </div>
+                            <p class="timeline-description">
+                                Designed scalable GCP solutions, automating workflows and orchestrating deployments that aligned with enterprise requirements. Collaborated with cross-functional teams to deploy cloud services and optimize infrastructure.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">GCP</span>
+                                <span class="tag">Cloud Functions</span>
+                                <span class="tag">Agile</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="timeline-title">Data Analytics Intern</h3>
+                                    <p class="timeline-company">General Motors</p>
+                                </div>
+                                <span class="timeline-date">2023</span>
+                            </div>
+                            <p class="timeline-description">
+                                Created automated data quality reporting and analytics pipelines for Device Analytics, boosting visibility across manufacturing teams. Collaborated with plant-level data and infrastructure teams to clean and optimize analytics pipelines.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Data Quality</span>
+                                <span class="tag">Analytics</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                <!-- LinkedIn -->
-                <a href="https://linkedin.com/in/vedpawar" target="_blank" rel="noopener" class="contact-icon-link" aria-label="LinkedIn">
-                    <div class="contact-icon-wrapper">
-                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                        <span class="contact-label">LinkedIn</span>
-                    </div>
-                </a>
+        <!-- Certifications Section -->
+        <section id="certifications" class="section">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Credentials</p>
+                    <h2 class="section-title">Certifications</h2>
+                </header>
+                <div class="certifications-grid">
+                    <article class="certification-card">
+                        <div class="certification-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="6"/>
+                                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+                            </svg>
+                        </div>
+                        <h3 class="certification-title">Google Cloud Digital Leader</h3>
+                        <p class="certification-description">Cloud infrastructure and digital transformation expertise</p>
+                        <span class="certification-badge">GCP</span>
+                    </article>
+                    <article class="certification-card">
+                        <div class="certification-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3 class="certification-title">Neural Networks &amp; Deep Learning</h3>
+                        <p class="certification-description">Deep learning fundamentals and neural network architectures</p>
+                        <span class="certification-badge">Coursera</span>
+                    </article>
+                    <article class="certification-card">
+                        <div class="certification-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                        </div>
+                        <h3 class="certification-title">Full-Stack Development</h3>
+                        <p class="certification-description">Modern web development and software engineering practices</p>
+                        <span class="certification-badge">In Progress</span>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                <!-- GitHub -->
-                <a href="https://github.com/vedpawar" target="_blank" rel="noopener" class="contact-icon-link" aria-label="GitHub">
-                    <div class="contact-icon-wrapper">
-                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <span class="contact-label">GitHub</span>
-                    </div>
-                </a>
+        <!-- About Section -->
+        <section id="about" class="section section--alt">
+            <div class="container">
+                <header class="section-header">
+                    <p class="section-eyebrow">Background</p>
+                    <h2 class="section-title">About Me</h2>
+                </header>
+                <div class="about-grid">
+                    <article class="about-card">
+                        <div class="about-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            </svg>
+                        </div>
+                        <h3 class="about-title">Education</h3>
+                        <p class="about-description">B.Tech Computer Science &amp; Engineering at Vellore Institute of Technology with CGPA 8.69/10. Specializations in ML, Data Analytics, and Cloud.</p>
+                    </article>
+                    <article class="about-card">
+                        <div class="about-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                        </div>
+                        <h3 class="about-title">Skills</h3>
+                        <p class="about-description">Python, JavaScript, TypeScript, React, Flask, TensorFlow, PyTorch, Docker, Git, GCP. Expertise in ML, Full-Stack, and Cloud Architecture.</p>
+                    </article>
+                    <article class="about-card">
+                        <div class="about-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3 class="about-title">Currently</h3>
+                        <p class="about-description">Building ML-driven reporting tools, experimenting with GenAI, and designing delightful UI systems that communicate data clearly.</p>
+                    </article>
+                    <article class="about-card">
+                        <div class="about-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 class="about-title">Collaboration</h3>
+                        <p class="about-description">Open to software engineering roles, ML research positions, and collaborative projects that bring bold ideas to production.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                <!-- Email with sliding reveal -->
-                <button class="contact-icon-link contact-copyable" data-contact="ved@pawar.dev" aria-label="Email: ved@pawar.dev">
-                    <div class="contact-icon-wrapper">
-                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <header class="section-header section-header--center">
+                    <p class="section-eyebrow">Get in Touch</p>
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="section-description">Ready to build something great together? Reach out through any of these channels.</p>
+                </header>
+                <div class="contact-grid">
+                    <a href="https://github.com/VedPawar1410" target="_blank" rel="noopener" class="contact-card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
                         </svg>
-                        <span class="contact-reveal">ved@pawar.dev</span>
-                        <span class="contact-label">Email</span>
-                    </div>
-                    <div class="copy-feedback">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/vedpawar14" target="_blank" rel="noopener" class="contact-card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                         </svg>
-                    </div>
-                </button>
-
-                <!-- Phone with sliding reveal -->
-                <button class="contact-icon-link contact-copyable" data-contact="+1234567890" aria-label="Phone: +1234567890">
-                    <div class="contact-icon-wrapper">
-                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <span>LinkedIn</span>
+                    </a>
+                    <button class="contact-card contact-copyable" data-contact="vedpawar1410@gmail.com">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="5" width="18" height="14" rx="2"/>
+                            <path d="M3 7l9 6 9-6"/>
                         </svg>
-                        <span class="contact-reveal">+1234567890</span>
-                        <span class="contact-label">Phone</span>
-                    </div>
-                    <div class="copy-feedback">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <span>Email</span>
+                        <span class="copy-hint">Click to copy</span>
+                    </button>
+                    <a href="assets/VedPawar_Resume.pdf" target="_blank" rel="noopener" class="contact-card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="12" y1="18" x2="12" y2="12"/>
+                            <polyline points="9 15 12 18 15 15"/>
                         </svg>
-                    </div>
-                </button>
-
-                <!-- Resume Download -->
-                <a href="assets/VedPawar_Resume.pdf" target="_blank" rel="noopener" class="contact-icon-link contact-resume" aria-label="Download Resume">
-                    <div class="contact-icon-wrapper">
-                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <polyline points="14 2 14 8 20 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <line x1="12" y1="18" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <polyline points="9 15 12 18 15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <span class="contact-label">Resume</span>
-                    </div>
-                </a>
+                        <span>Resume</span>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
-    <footer>
-        <p>© <span id="year"></span> Ved Pawar · Built with care and bold outlines.</p>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Ved Pawar. Built with precision and care.</p>
+        </div>
     </footer>
+
+    <!-- Toast Notification -->
     <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
-    
-    <!-- Image Fullscreen Modal -->
-    <div id="image-modal" class="image-modal">
-        <button class="modal-close-btn" aria-label="Close fullscreen image">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal">
+        <button class="modal-close" aria-label="Close modal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"/>
             </svg>
         </button>
         <div class="modal-content">
-            <div class="modal-image-placeholder"></div>
+            <img src="" alt="" class="modal-image">
         </div>
     </div>
-    
-    <!-- External JavaScript -->
+
     <script src="script.js"></script>
 </body>
 </html>
