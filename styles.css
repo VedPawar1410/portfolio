@@ -474,6 +474,7 @@ p {
     width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
+    object-position: center 30%; /* Adjust this: try "center 20%", "center center", etc. */
     border-radius: var(--radius-xl);
     border: 1px solid var(--border-light);
     box-shadow: var(--shadow-xl);
