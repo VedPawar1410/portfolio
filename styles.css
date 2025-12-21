@@ -720,6 +720,30 @@ p {
     white-space: nowrap;
 }
 
+.timeline-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.timeline-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    color: var(--text-muted);
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-base);
+}
+
+.timeline-link:hover {
+    color: var(--accent);
+    background: var(--accent-bg);
+    transform: translateY(-2px);
+}
+
 .timeline-description {
     font-size: 0.9375rem;
     color: var(--text-secondary);
@@ -806,6 +830,40 @@ p {
     color: var(--accent);
     background: var(--accent-bg);
     border-radius: var(--radius-full);
+}
+
+a.certification-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+}
+
+a.certification-card .certification-title,
+a.certification-card .certification-description {
+    color: inherit;
+}
+
+a.certification-card .certification-title {
+    color: var(--text-primary);
+}
+
+a.certification-card .certification-description {
+    color: var(--text-tertiary);
+}
+
+.certification-link-icon {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    color: var(--text-muted);
+    opacity: 0;
+    transition: all var(--transition-base);
+}
+
+a.certification-card:hover .certification-link-icon {
+    opacity: 1;
+    color: var(--accent);
 }
 
 
