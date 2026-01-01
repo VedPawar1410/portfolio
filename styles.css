@@ -912,6 +912,102 @@ a.certification-card:hover .certification-link-icon {
     line-height: 1.7;
 }
 
+/* Skills Badges */
+.about-card--skills {
+    grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+    .about-card--skills {
+        grid-column: span 1;
+    }
+}
+
+.skills-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.skill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.75rem;
+    font-weight: var(--font-semibold);
+    color: #fff;
+    border-radius: 0.25rem;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    letter-spacing: 0.01em;
+}
+
+.skill-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.skill-badge svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+/* Python - Blue/Yellow */
+.skill-badge--python {
+    background: linear-gradient(135deg, #3776AB 50%, #FFD43B 50%);
+    color: #fff;
+}
+
+/* JavaScript - Yellow */
+.skill-badge--javascript {
+    background: #F7DF1E;
+    color: #000;
+}
+
+/* TypeScript - Blue */
+.skill-badge--typescript {
+    background: #3178C6;
+}
+
+/* React - Cyan */
+.skill-badge--react {
+    background: #20232A;
+    color: #61DAFB;
+}
+
+/* Flask - Dark */
+.skill-badge--flask {
+    background: #000;
+    color: #fff;
+}
+
+/* TensorFlow - Orange */
+.skill-badge--tensorflow {
+    background: #FF6F00;
+}
+
+/* PyTorch - Red/Orange */
+.skill-badge--pytorch {
+    background: #EE4C2C;
+}
+
+/* Docker - Blue */
+.skill-badge--docker {
+    background: #2496ED;
+}
+
+/* Git - Orange/Red */
+.skill-badge--git {
+    background: #F05032;
+}
+
+/* GCP - Multi-color styled as blue */
+.skill-badge--gcp {
+    background: #4285F4;
+}
+
 
 .contact-grid {
     display: grid;
